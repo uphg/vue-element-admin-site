@@ -276,19 +276,19 @@ overflow-y: scroll;
 可以通过`default-openeds`来进行设置，首先找到 [侧边栏代码](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/layout/components/Sidebar/index.vue)
 
 ```html
- <el-menu
-        :default-openeds="['/example','/nested']" // 添加本行代码
-        :default-active="activeMenu"
-        :collapse="isCollapse"
-        :background-color="variables.menuBg"
-        :text-color="variables.menuText"
-        :unique-opened="false"
-        :active-text-color="variables.menuActiveText"
-        :collapse-transition="false"
-        mode="vertical"
-      >
-        <sidebar-item v-for="route in permission_routes" :key="route.path" :item="route" :base-path="route.path" />
-      </el-menu>
+<el-menu
+  :default-openeds="['/example','/nested']" // 添加本行代码
+  :default-active="activeMenu"
+  :collapse="isCollapse"
+  :background-color="variables.menuBg"
+  :text-color="variables.menuText"
+  :unique-opened="false"
+  :active-text-color="variables.menuActiveText"
+  :collapse-transition="false"
+  mode="vertical"
+>
+  <sidebar-item v-for="route in permission_routes" :key="route.path" :item="route" :base-path="route.path" />
+</el-menu>
 ```
 
 **注意 :default-openeds="['/example','/nested']" 里面填写的是 submenu 的 route-path**
